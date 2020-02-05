@@ -8,12 +8,13 @@
 
 - 不可变性
 
-- 只有一个参数
+- 只有一个参数，依次对其他变量进行引用，形成一颗引用树
 
 ## 闭包
 
 - 局部变量
 - 自由变量(描述函数所处的环境)
+- 由自由变量出发
 
 ![-w1155](https://raw.githubusercontent.com/BryantChang/Go_study/master/imgs/closure.png)
 
@@ -133,7 +134,7 @@ auto adder() {
 }
 ```
 
--java
+- java
 
 ```java
 Function<Integer, Integer> adder() {
@@ -144,3 +145,8 @@ Function<Integer, Integer> adder() {
   }
 }
 ```
+
+- 相比其他语言，go语言函数编程优势
+
+  - 更自然，不需要修饰要如何访问自由变量
+  - 没有lambda，但有匿名函数
